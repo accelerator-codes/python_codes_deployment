@@ -8,6 +8,7 @@ WORKDIR /python
 RUN apt-get -y update
 RUN apt install -y python3 pip python3.12-venv
 RUN python3 -m venv /python/venv-pyt-acc
+RUN /python/venv-pyt-acc/bin/pip install ipython numba pyfftw numexpr
 RUN /python/venv-pyt-acc/bin/pip install xsuite xtrack
 RUN /python/venv-pyt-acc/bin/pip install rf-track
 RUN /python/venv-pyt-acc/bin/pip install ocelot-collab
